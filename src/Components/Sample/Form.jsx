@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Form, Row, Col, Image, Container, Button } from 'react-bootstrap'
+import { Form, Row, Col, Container, Button } from 'react-bootstrap'
 
 function MainForm() {
     return (

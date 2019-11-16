@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Image, Jumbotron, Container } from 'react-bootstrap'
 
-import Food from './../Assets/Images/food.jpg'
+import Food from '../assets/images/food.jpg'
 
 import './styles.css'
 

@@ -1,8 +1,5 @@
 import React from 'react';
-
 import { Container } from 'react-bootstrap'
-
-//import components
 import MainNavbar from '../components/MainNavbar'
 import Title from '../components/Title'
 import Brand from '../components/Brand'
@@ -13,7 +10,7 @@ function GetStarted() {
       <Container fluid="true">
           <MainNavbar/>
           <Title/>
-          <Brand/>
+          <Brand />
           <Footer/>
       </Container>
   );

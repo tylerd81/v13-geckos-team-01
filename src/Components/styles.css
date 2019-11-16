@@ -1,17 +1,7 @@
-.sampleLogoSize {
-    height: auto ;
-    width: auto;
-}
-
 .letterColorNavbar{
     color: black !important;
     font-size: large;
     font-weight: bold;
-}
-
-.titleImage{
-    width: auto;
-    height: auto;
 }
 
 .color1{
@@ -34,11 +24,15 @@
     background: #4C8067;
 }
 
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
 .mainFont{
     font-family: "Times New Roman", Times, serif;
     font-size: 24px;
 }
-
-.jumbotron {
-    background-color:#F2F3ED !important; 
+.row {
+    padding: 25px 0;
 }

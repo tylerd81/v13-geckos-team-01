@@ -1,6 +1,3 @@
-# v13-geckos-team-01
-Meal Calorie Counter | Voyage-13 | https://chingu.io/ | Twitter: https://twitter.com/ChinguCollabs
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

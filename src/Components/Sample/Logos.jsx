@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Row, Image, Container } from 'react-bootstrap'
 
-import './styles.css'
+import '../styles.css'
 
-import Logo from './../Assets/Logo/logo_transparent.png'
+import Logo from '../../assets/logo/logo.png'
 
 function Logos() {
     return (

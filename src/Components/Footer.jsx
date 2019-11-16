@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Navbar, Nav, NavDropdown, Dropdown } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 
 import './styles.css'
 

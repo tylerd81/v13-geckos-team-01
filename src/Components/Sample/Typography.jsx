@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Card, Container } from 'react-bootstrap'
 
-import './styles.css'
+import '../styles.css'
 
 function Typography() {
     return (

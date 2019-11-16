@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# v13-geckos-team-01
+Add-project-description-here | Voyage-13 | https://chingu.io/ | Twitter: https://twitter.com/ChinguCollabs
+Meal Calorie Counter | Voyage-13 | https://chingu.io/ | Twitter: https://twitter.com/ChinguCollabs
 
 ## Available Scripts
 

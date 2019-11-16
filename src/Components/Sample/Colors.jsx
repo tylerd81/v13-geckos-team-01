@@ -1,6 +1,6 @@
 import React from 'react'
-import { Row, Col, Container, Card } from 'react-bootstrap'
-import './styles.css'
+import { Row, Col, Container } from 'react-bootstrap'
+import '../styles.css'
 function Colors() {
     return (
 

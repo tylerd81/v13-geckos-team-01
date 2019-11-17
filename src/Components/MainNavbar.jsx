@@ -1,22 +1,42 @@
 import React from 'react'
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Image } from 'react-bootstrap'
 import { withRouter } from "react-router-dom";
+
 import './styles.css'
+
+import Logo from '../assets/logo/logo.png'
 
 function MainNavbar({history}) {
     return (
-        <div>
-            <Navbar expand="lg" className="color3">
-                <Navbar.Brand href="#home">LogoHere</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav" >
-                    <Nav className="mr-auto">
-                        <Nav.Link className="letterColorNavbar" onClick={() => history.push("/")}>Home</Nav.Link>
-                    </Nav>
-                
-                </Navbar.Collapse>
-            </Navbar>
-        </div>
+        <Navbar expand="lg" className="color3">
+            <Navbar.Brand href="#home">
+                <Image 
+                    src={ Logo } 
+                    width="100" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav" >
+                <Nav className="ml-auto">
+                    <Nav.Link 
+                        className="letterColorNavbar" 
+                        onClick={() => history.push("/")}>Home    
+                    </Nav.Link>
+                    <Nav.Link 
+                        className="letterColorNavbar" 
+                        onClick={() => history.push("/search")}>Search    
+                    </Nav.Link>
+                    <Nav.Link 
+                        className="letterColorNavbar" 
+                        onClick={() => history.push("/results")}>Results   
+                    </Nav.Link>
+                    <Nav.Link 
+                        className="letterColorNavbar" 
+                        onClick={() => history.push("/sample")}>Sample  
+                    </Nav.Link>
+                </Nav>
+            
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
 

@@ -1,20 +1,20 @@
 import React from 'react'
 
-import { Navbar } from 'react-bootstrap'
+import { Container, Col } from 'react-bootstrap'
 
-import './styles.css'
+import './footer.css'
 
 
 function Footer() {
     return (
-        <div>
-            <Navbar expand="lg" className="color3">
-                <br/><br/>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                </Navbar.Collapse>
-            </Navbar>
-        </div>
+        <Container fluid="true">
+            <footer className="row color3">
+                <Col className="text-center">
+                    <p>Calc My Food! - &copy; 2019<br/>
+                    Chingu Project - v13-geckos-team-01</p>
+                </Col>
+            </footer>
+        </Container>
     )
 }
 

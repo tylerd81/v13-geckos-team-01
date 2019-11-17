@@ -19,17 +19,11 @@ function ComponentIndex() {
           <MainNavbar/>
           <Title/>
           <Brand/>
-          <br/>
           <Logos/>
-          <br/>
           <Colors/>
-          <br/>
           <Typography/>
-          <br/>
           <Icons/>
-          <br/>
           <MainForm/>
-          <br/>
           <Footer/>
       </Container>
   );

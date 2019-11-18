@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 import './styles.css'
 
-import Logo from '../assets/logo/logo.png'
+import Logo from './../Assets/Logo/logo.png'
 
 function MainNavbar({history}) {
     return (
@@ -31,7 +31,7 @@ function MainNavbar({history}) {
                     </Nav.Link>
                     <Nav.Link 
                         className="letterColorNavbar" 
-                        onClick={() => history.push("/sample")}>Sample  
+                        onClick={() => history.push("/sample")}>Style-Guide 
                     </Nav.Link>
                 </Nav>
             

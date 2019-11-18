@@ -4,7 +4,7 @@ import { Row, Image, Container } from 'react-bootstrap'
 
 import '../styles.css'
 
-import Logo from '../../assets/logo/logo.png'
+import Logo from './../../Assets/Logo/logo.png'
 
 function Logos() {
     return (

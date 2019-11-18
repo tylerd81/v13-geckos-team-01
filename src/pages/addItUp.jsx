@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap'
-import MainNavbar from '../components/MainNavbar'
-import Footer from '../components/Footer'
+import MainNavbar from '../Components/MainNavbar'
+import Footer from '../Components/Footer'
 
 function AddItUp() {
   return (

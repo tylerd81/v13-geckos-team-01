@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from 'react-bootstrap'
-import MainNavbar from '../components/MainNavbar'
-import Title from '../components/Title'
-import Brand from '../components/Brand'
-import Footer from '../components/Footer'
+import MainNavbar from '../Components/MainNavbar'
+import Title from '../Components/Title'
+import Brand from '../Components/Brand'
+import Footer from '../Components/Footer'
 
 function GetStarted() {
   return (

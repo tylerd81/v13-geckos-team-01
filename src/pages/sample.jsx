@@ -2,16 +2,16 @@ import React from 'react';
 
 import { Container } from 'react-bootstrap'
 
-//import components
-import MainNavbar from '../components/MainNavbar'
-import Title from '../components/Title'
-import Brand from '../components/Brand'
-import Logos from '../components/Sample/Logos'
-import Colors from '../components/Sample/Colors'
-import Typography from '../components/Sample/Typography'
-import Icons from '../components/Sample/Icons'
-import MainForm from '../components/Sample/Form'
-import Footer from '../components/Footer'
+//import Components
+import MainNavbar from '../Components/MainNavbar'
+import Title from '../Components/Title'
+import Brand from '../Components/Brand'
+import Logos from '../Components/Sample/Logos'
+import Colors from '../Components/Sample/Colors'
+import Typography from '../Components/Sample/Typography'
+import Icons from '../Components/Sample/Icons'
+import MainForm from '../Components/Sample/Form'
+import Footer from '../Components/Footer'
 
 function ComponentIndex() {
   return (

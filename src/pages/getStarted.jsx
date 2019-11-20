@@ -5,7 +5,7 @@ import Brand from "../Components/Brand";
 
 function GetStarted() {
   return (
-    <Container fluid="true">
+    <Container className="p-0" fluid="true">
       <Title />
       <Brand />
     </Container>

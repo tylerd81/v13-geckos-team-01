@@ -13,7 +13,7 @@ import MainForm from "../Components/Sample/Form";
 
 function ComponentIndex() {
   return (
-    <Container fluid="true">
+    <Container className="p-0" fluid="true">
       <Title />
       <Brand />
       <Logos />

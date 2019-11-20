@@ -4,7 +4,7 @@ import LabelContainer from "../Components/LabelContainer";
 
 function Results() {
   return (
-    <Container fluid="true">
+    <Container className="p-0" fluid="true">
       <LabelContainer />
     </Container>
   );

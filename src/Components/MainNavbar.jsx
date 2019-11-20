@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 import './styles.css'
 
-import Logo from './../Assets/Logo/logo.png'
+import Logo from './../Assets/Logo/CalcIcon.png'
 
 function MainNavbar({history}) {
     return (

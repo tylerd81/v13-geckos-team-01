@@ -7,7 +7,8 @@ const Label = ({names, units, values}) => {
             <tbody>
                 <tr>
                 <td><strong>{names}</strong></td>
-                <td>{values} {units}</td>
+                <td>{values}</td>
+                <td>{units}</td>
                 </tr>       
             </tbody>
 

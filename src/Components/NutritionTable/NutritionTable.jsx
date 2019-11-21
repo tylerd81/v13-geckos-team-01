@@ -2,52 +2,50 @@ import React from "react";
 import PropTypes from "prop-types";
 import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
+import NutritionTableHeading from "./NutritionTableHeading";
+import NutritionTableBody from "./NutritionTableBody";
 
 const NutritionTable = ({ nutritionData }) => {
-  const nutritionItems = nutritionData.map(item => {
-    const { nutrients } = item;
-    const nutrientValues = [];
-
-    // convert the nutrient data into a dictionary which
-    // uses the nutrient names as the keys
-    for (let i = 0; i < nutrients.length; i++) {
-      const { name, unitName, amount } = nutrients[i];
-      nutrientValues[name] = `${amount}${unitName}`;
+  const data = [
+    {
+      name: "cheese",
+      id: 65452,
+      portion: { size: 10, unit: "g" },
+      nutrients: {
+        protein: { value: 12.333, unitName: "g" },
+        calories: { value: 300, unitName: "kcal" },
+        fat: { value: 15, unitName: "g" }
+      }
+    },
+    {
+      name: "Milk",
+      id: 65453,
+      portion: { size: 10, unit: "g" },
+      nutrients: {
+        protein: { value: 12.333, unitName: "g" },
+        calories: { value: 300, unitName: "kcal" },
+        fat: { value: 15, unitName: "g" }
+      }
     }
+  ];
 
-    return (
-      <tr key={item.itemName}>
-        <td>{item.itemName}</td>
-        <td>{nutrientValues["Calories"]}</td>
-        <td>{nutrientValues["Fat"]}</td>
-        <td>{nutrientValues["Cholesterol"]}</td>
-        <td>{nutrientValues["Sodium"]}</td>
-        <td>{nutrientValues["Carbohydrates"]}</td>
-        <td>{nutrientValues["Protein"]}</td>
-        <td>{nutrientValues["Sugars"]}</td>
-        <td>{nutrientValues["Fiber"]}</td>
-      </tr>
-    );
-  });
+  const tableStructure = [
+    { title: "Item Name", key: "name" },
+    { title: "Calories", key: "nutrients.calories.value" },
+    { title: "Protein", key: "nutrients.protein.value" },
+    { title: "Fat", key: "nutrients.fat.value" }
+  ];
 
   return (
     <Container fluid>
       <Table responsive striped bordered className="mt-2">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Calories</th>
-            <th>Total Fat</th>
-            <th>Cholesterol</th>
-            <th>Sodium</th>
-            <th>Carbohydrates</th>
-            <th>Protein</th>
-            <th>Sugars</th>
-            <th>Fiber</th>
-          </tr>
-        </thead>
-
-        <tbody>{nutritionItems}</tbody>
+        <NutritionTableHeading
+          tableHeading={tableStructure.map(heading => heading.title)}
+        />
+        <NutritionTableBody
+          tableKeys={tableStructure.map(tableKey => tableKey.key)}
+          tableData={data}
+        />
       </Table>
     </Container>
   );

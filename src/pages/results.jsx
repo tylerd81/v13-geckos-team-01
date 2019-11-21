@@ -1,10 +1,13 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import NutritionTable from "../Components/NutritionTable/NutritionTable";
-
-import { nutritionData } from "../Components/NutritionTable/testdata";
+import testData from "../Components/NutritionTable/testdata.json";
+import { convertApiDataToNutritionData } from "../Components/NutritionTable/convert";
 
 function Results() {
+  const nutritionData = convertApiDataToNutritionData(testData);
+  console.log(nutritionData);
+
   return (
     <Container className="p-0" fluid="true">
       <NutritionTable nutritionData={nutritionData} />

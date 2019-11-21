@@ -3319,5 +3319,253 @@
       }
     ],
     "changes": ""
+  },
+  {
+    "foodClass": "Branded",
+    "description": "BUTTER",
+    "foodNutrients": [
+      {
+        "type": "FoodNutrient",
+        "id": 2995235,
+        "nutrient": {
+          "id": 1005,
+          "number": "205",
+          "name": "Carbohydrate, by difference",
+          "rank": 1110,
+          "unitName": "g"
+        },
+        "foodNutrientDerivation": {
+          "id": 75,
+          "code": "LCCD",
+          "description": "Calculated from a daily value percentage per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 0e-8
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 2995236,
+        "nutrient": {
+          "id": 1104,
+          "number": "318",
+          "name": "Vitamin A, IU",
+          "rank": 7500,
+          "unitName": "IU"
+        },
+        "foodNutrientDerivation": {
+          "id": 75,
+          "code": "LCCD",
+          "description": "Calculated from a daily value percentage per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 2857.0
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366463,
+        "nutrient": {
+          "id": 1003,
+          "number": "203",
+          "name": "Protein",
+          "rank": 600,
+          "unitName": "g"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 0e-8
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366464,
+        "nutrient": {
+          "id": 1004,
+          "number": "204",
+          "name": "Total lipid (fat)",
+          "rank": 800,
+          "unitName": "g"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 78.57
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366465,
+        "nutrient": {
+          "id": 1008,
+          "number": "208",
+          "name": "Energy",
+          "rank": 300,
+          "unitName": "kcal"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 714.0
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366466,
+        "nutrient": {
+          "id": 1093,
+          "number": "307",
+          "name": "Sodium, Na",
+          "rank": 5800,
+          "unitName": "mg"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 643.0
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366467,
+        "nutrient": {
+          "id": 1253,
+          "number": "601",
+          "name": "Cholesterol",
+          "rank": 15700,
+          "unitName": "mg"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 214.0
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366468,
+        "nutrient": {
+          "id": 1257,
+          "number": "605",
+          "name": "Fatty acids, total trans",
+          "rank": 15400,
+          "unitName": "g"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 0e-8
+      },
+      {
+        "type": "FoodNutrient",
+        "id": 4366469,
+        "nutrient": {
+          "id": 1258,
+          "number": "606",
+          "name": "Fatty acids, total saturated",
+          "rank": 9700,
+          "unitName": "g"
+        },
+        "foodNutrientDerivation": {
+          "id": 70,
+          "code": "LCCS",
+          "description": "Calculated from value per serving size measure",
+          "foodNutrientSource": {
+            "id": 9,
+            "code": "12",
+            "description": "Manufacturer's analytical; partial documentation"
+          }
+        },
+        "amount": 50.0
+      }
+    ],
+    "foodComponents": [],
+    "foodAttributes": [],
+    "tableAliasName": "branded_food",
+    "brandOwner": "Dean Foods Company",
+    "gtinUpc": "070399432102",
+    "dataSource": "LI",
+    "ingredients": "PASTEURIZED CREAM (DERIVED FROM MILK), SALT.",
+    "modifiedDate": "7/14/2017",
+    "availableDate": "7/14/2017",
+    "servingSize": 14.0,
+    "servingSizeUnit": "g",
+    "householdServingFullText": "1 Tbsp",
+    "labelNutrients": {
+      "fat": {
+        "value": 10.9998
+      },
+      "saturatedFat": {
+        "value": 7.0
+      },
+      "transFat": {
+        "value": 0e-16
+      },
+      "cholesterol": {
+        "value": 29.96
+      },
+      "sodium": {
+        "value": 90.02
+      },
+      "carbohydrates": {
+        "value": 0e-16
+      },
+      "protein": {
+        "value": 0e-16
+      },
+      "calories": {
+        "value": 99.96
+      }
+    },
+    "brandedFoodCategory": "Butter & Spread",
+    "fdcId": 442117,
+    "dataType": "Branded",
+    "publicationDate": "4/1/2019",
+    "foodPortions": [],
+    "changes": ""
   }
 ]

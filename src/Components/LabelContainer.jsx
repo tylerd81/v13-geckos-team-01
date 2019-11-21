@@ -6,6 +6,7 @@ import './label.css'
 
 import testData from './testData.json'
 
+let tempVar = 0
 
 
 class LabelContainer extends React.Component {
@@ -38,6 +39,7 @@ class LabelContainer extends React.Component {
         <thead>
             <tr>
             <th>Item</th>
+            <th><i>Quantity</i></th>
             <th><i>Units</i></th>
             </tr>
         </thead>
@@ -49,8 +51,8 @@ class LabelContainer extends React.Component {
                 value.foodNutrients.map((value, index) => (
                   //testing logs
                   //console.log(varName), //console.log(value.nutrient.name), //console.log(testData[0]), //console.log(value.nutrient.name), //console.log(value.amount),
-                  //console.log(testData[0]),
-                    <Label names={value.nutrient.name} values={value.amount} units={value.nutrient.unitName}/>
+                  console.log(testData[0]),
+                    <Label names={value.nutrient.name} values={Math.round(value.amount).toFixed(1)} units={value.nutrient.unitName}/>
                 ))
                )
         })}
@@ -68,6 +70,7 @@ class LabelContainer extends React.Component {
         <thead>
             <tr>
             <th>Item</th>
+            <th><i>Quantity</i></th>
             <th><i>Units</i></th>
             </tr>
         </thead>
@@ -79,8 +82,9 @@ class LabelContainer extends React.Component {
                 value.foodNutrients.map((value, index) => (
                   //testing logs
                   //console.log(varName), //console.log(value.nutrient.name), //console.log(testData[0]), //console.log(value.nutrient.name), //console.log(value.amount),
-                  console.log(testData[0]),
-                    <Label names={value.nutrient.name} values={Math.round(154*value.amount)/100} units={value.nutrient.unitName}/>
+                  tempVar = value.amount,
+                  tempVar = (154*tempVar)/100,
+                    <Label names={value.nutrient.name} values={(Math.round(154*tempVar)/100).toFixed(1)} units={value.nutrient.unitName}/>
                 ))
                )
         })}

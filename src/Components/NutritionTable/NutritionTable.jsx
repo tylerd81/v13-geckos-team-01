@@ -6,29 +6,6 @@ import NutritionTableHeading from "./NutritionTableHeading";
 import NutritionTableBody from "./NutritionTableBody";
 
 const NutritionTable = ({ nutritionData }) => {
-  // const data = [
-  //   {
-  //     name: "cheese",
-  //     id: 65452,
-  //     portion: { size: 10, unit: "g" },
-  //     nutrients: {
-  //       protein: { value: 12.333, unitName: "g" },
-  //       calories: { value: 300, unitName: "kcal" },
-  //       fat: { value: 15, unitName: "g" }
-  //     }
-  //   },
-  //   {
-  //     name: "Milk",
-  //     id: 65453,
-  //     portion: { size: 10, unit: "g" },
-  //     nutrients: {
-  //       protein: { value: 12.333, unitName: "g" },
-  //       calories: { value: 300, unitName: "kcal" },
-  //       fat: { value: 15, unitName: "g" }
-  //     }
-  //   }
-  // ];
-
   const tableStructure = [
     { title: "Item Name", key: "name" },
     { title: "Fat", key: "nutrients.fat.value" },

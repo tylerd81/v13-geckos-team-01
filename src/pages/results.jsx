@@ -6,7 +6,6 @@ import { convertApiDataToNutritionData } from "../Components/NutritionTable/conv
 
 function Results() {
   const nutritionData = convertApiDataToNutritionData(testData);
-  console.log(nutritionData);
 
   return (
     <Container className="p-0" fluid="true">

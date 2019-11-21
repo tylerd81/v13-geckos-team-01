@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-=======
-import React from 'react';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-
->>>>>>> dev
 
 import Sample from "./pages/sample";
 import GetStarted from "./pages/getStarted";

@@ -3,9 +3,17 @@ import PropTypes from "prop-types";
 
 const NutritionTableBody = ({ tableKeys, tableData }) => {
   // tableData is the array of food items.
-
+  if (tableData.length === 0) {
+    return (
+      <tr>
+        <td>
+          <h2>Loading....</h2>
+        </td>
+      </tr>
+    );
+  }
   // map through the tableData array and create table rows
-  const tableRows = tableData.map(data => {
+  const tableRows = tableData.map((data, dataIndex) => {
     // get the data using the tableKeys
     const tableItems = tableKeys.map((key, index) => {
       // this is looping through the keys and grabbing the
@@ -32,9 +40,9 @@ const NutritionTableBody = ({ tableKeys, tableData }) => {
         // not a multi level key, just get the data
         tableItem = data[key];
       }
-      return <td key={data.id + index}>{tableItem}</td>;
+      return <td key={index}>{tableItem}</td>;
     });
-    return <tr key={data.id}>{tableItems}</tr>;
+    return <tr key={dataIndex}>{tableItems}</tr>;
   });
   return <tbody>{tableRows}</tbody>;
 };

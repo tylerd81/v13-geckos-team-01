@@ -39,26 +39,39 @@ export function convertApiDataToNutritionData(data) {
 
   const nutritionData = data.map(item => {
     const nutrients = {};
-    const name = item.description;
+
+    // get the name of the item from json data
+    // some item names are in all caps, so fix that
+    const name =
+      item.description.charAt(0).toUpperCase() +
+      item.description.toLowerCase().substring(1);
+
     const regex = new RegExp(fields.join("|"));
+
+    // get foodNutrients array from json object
     const { foodNutrients } = item;
 
+    // loop through each nutrient in the foodNutrients array
     foodNutrients.forEach(foodNut => {
       // check if this is one of the fields to save
       if (foodNut.nutrient.name.match(regex)) {
         let { name, unitName, id } = foodNut.nutrient;
         const { amount } = foodNut;
 
+        // rename some of the fields
         if (name === "Energy") {
           name = "Calories";
         } else if (name.includes("Total")) {
           name = "fat";
         } else if (name.includes("Carbohydrate")) {
           name = "carbohydrates";
+        } else if (name.includes("Sodium")) {
+          name = "sodium";
         }
         nutrients[name.toLowerCase()] = { value: amount, unitName, id };
       }
     });
+
     return {
       name,
       portion,

@@ -35,7 +35,7 @@ export function convertApiDataToNutritionData(data) {
     "Calcium, Ca",
     "Iron, Fe",
     "Sodium, Na"
-  ].map(s => s.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"));
+  ].map(s => s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"));
 
   const nutritionData = data.map(item => {
     const nutrients = {};

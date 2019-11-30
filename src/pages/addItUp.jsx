@@ -1,15 +1,8 @@
-import React from 'react';
-import { Container } from 'react-bootstrap'
-import MainNavbar from '../Components/MainNavbar'
-import Footer from '../Components/Footer'
+import React from "react";
+import { Container } from "react-bootstrap";
 
 function AddItUp() {
-  return (
-      <Container fluid="true">
-          <MainNavbar/>
-          <Footer/>
-      </Container>
-  );
+  return <Container className="p-0" fluid="true"></Container>;
 }
 
 export default AddItUp;

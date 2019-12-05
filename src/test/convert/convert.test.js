@@ -1,4 +1,4 @@
-import { convertApiDataToNutritionData } from "../Components/NutritionTable/convert";
+import { convertApiDataToNutritionData } from "../../Components/NutritionTable/convert";
 
 import testData from "./testdata.json";
 

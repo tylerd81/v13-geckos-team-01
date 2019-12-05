@@ -8,7 +8,7 @@ import "./nutrition-table.css";
   tableHeading:
     an array of strings that will be the text for each table header
   
-  key: 
+  tableKeys: 
     an array of strings that are used as the property name when setting the
     data for that column. An example is "nutrients.calories.value".
     The table will use the value of the property named nutrients.calories.value
@@ -31,6 +31,7 @@ const NutritionTableHeading = ({
             className="nutrition-table-header"
             key={heading}
             onClick={() => headerClickHandler(tableKeys[index])}
+            data-testid={heading}
           >
             {heading}
           </th>

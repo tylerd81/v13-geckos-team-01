@@ -60,7 +60,7 @@ export function convertApiDataToNutritionData(data) {
 
         // rename some of the fields
         if (name === "Energy") {
-          name = "Calories";
+          name = "calories";
         } else if (name.includes("Total")) {
           name = "fat";
         } else if (name.includes("Carbohydrate")) {

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <thead>
+    <tr>
+      <th
+        class="nutrition-table-header"
+        data-testid="One"
+      >
+        One
+      </th>
+      <th
+        class="nutrition-table-header"
+        data-testid="Two"
+      >
+        Two
+      </th>
+      <th
+        class="nutrition-table-header"
+        data-testid="Three"
+      >
+        Three
+      </th>
+      <th
+        class="nutrition-table-header"
+        data-testid="Four"
+      >
+        Four
+      </th>
+    </tr>
+  </thead>
+</DocumentFragment>
+`;

@@ -9,7 +9,6 @@
     "http-proxy-middleware": "^0.20.0",
     "json-loader": "^0.5.7",
     "morgan": "^1.9.1",
-    "prettier": "^1.19.1",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
@@ -20,8 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier \"**/*.{js,jsx,css,scss}\" --write"
+    "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:4000",
   "eslintConfig": {

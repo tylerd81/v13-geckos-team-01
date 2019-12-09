@@ -5,17 +5,21 @@ import Sample from "./pages/sample";
 import GetStarted from "./pages/getStarted";
 import AddItUp from "./pages/addItUp";
 import Results from "./pages/results";
+import MainNavbar from "./Components/MainNavbar";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <MainNavbar />
         <Switch>
           <Route exact path="/" component={GetStarted} />
           <Route exact path="/search" component={AddItUp} />
           <Route exact path="/results" component={Results} />
           <Route exact path="/sample" component={Sample} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

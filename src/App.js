@@ -7,6 +7,7 @@ import AddItUp from "./pages/addItUp";
 import Results from "./pages/results";
 import MainNavbar from "./Components/MainNavbar";
 import Footer from "./Components/Footer";
+import ItemList from "./pages/ItemList";
 
 // Context stuff
 import ItemListState from "./context/ItemListState";
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/search" component={AddItUp} />
             <Route exact path="/results" component={Results} />
             <Route exact path="/sample" component={Sample} />
+            <Route exact path="/itemlist" component={ItemList} />
           </Switch>
           <Footer />
         </Router>

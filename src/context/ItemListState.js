@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import axios from "axios";
 
 import ItemListContext from "./itemListContext";
 import itemReducer from "./reducer";

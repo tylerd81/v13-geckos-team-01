@@ -21,13 +21,9 @@ const AddItUp = props => {
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const {
-    itemList,
-    lastItemAdded,
-    isToastShown,
-    hideToast,
-    showToast
-  } = useContext(itemListContext);
+  const { itemList, lastItemAdded, isToastShown, hideToast } = useContext(
+    itemListContext
+  );
 
   const searchTermChange = e => {
     setSearchTerm(e.target.value);

@@ -29,6 +29,12 @@ function MainNavbar({ history }) {
           </Nav.Link>
           <Nav.Link
             className="letterColorNavbar"
+            onClick={() => history.push("/itemlist")}
+          >
+            My List
+          </Nav.Link>
+          <Nav.Link
+            className="letterColorNavbar"
             onClick={() => history.push("/results")}
           >
             Results

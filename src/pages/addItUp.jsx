@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 // Bootstrap imports
 import Container from "react-bootstrap/Container";
@@ -12,6 +12,9 @@ import Toast from "react-bootstrap/Toast";
 import SearchResults from "../Components/Search/SearchResults";
 import { searchByTerm } from "../util/search";
 import ListStatus from "../Components/Search/ListStatus";
+
+// Context stuff
+import itemListContext from "../context/itemListContext";
 
 const AddItUp = props => {
   const [searchTerm, setSearchTerm] = useState("");

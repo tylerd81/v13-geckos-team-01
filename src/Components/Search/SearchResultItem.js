@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import itemListContext from "../../context/itemListContext";
+
+// context stuff
 
 import "./search-result.css";
 
-const SearchResultItem = ({ fdcId, name, addItem, notes, ingredients }) => {
-  const addItemClickHandler = () => addItem({ fdcId, name });
+const SearchResultItem = ({ fdcId, name, notes, ingredients }) => {
+  const { addItem } = useContext(itemListContext);
+  const addItemClickHandler = () => {
+    addItem({ fdcId, name });
+  };
 
+  // add way to show and hide the details here - add a state variable that will
+  // show if the details are shown or not.
   // fix the names that are in all caps
   const fixedName =
     name.charAt(0).toUpperCase() + name.substring(1).toLowerCase();
@@ -47,7 +55,6 @@ const SearchResultItem = ({ fdcId, name, addItem, notes, ingredients }) => {
 SearchResultItem.propTypes = {
   fdcId: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  addItem: PropTypes.func.isRequired,
   notes: PropTypes.string,
   ingredients: PropTypes.string
 };

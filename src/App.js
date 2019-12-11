@@ -8,19 +8,24 @@ import Results from "./pages/results";
 import MainNavbar from "./Components/MainNavbar";
 import Footer from "./Components/Footer";
 
+// Context stuff
+import ItemListState from "./context/ItemListState";
+
 function App() {
   return (
     <div className="App">
-      <Router>
-        <MainNavbar />
-        <Switch>
-          <Route exact path="/" component={GetStarted} />
-          <Route exact path="/search" component={AddItUp} />
-          <Route exact path="/results" component={Results} />
-          <Route exact path="/sample" component={Sample} />
-        </Switch>
-        <Footer />
-      </Router>
+      <ItemListState>
+        <Router>
+          <MainNavbar />
+          <Switch>
+            <Route exact path="/" component={GetStarted} />
+            <Route exact path="/search" component={AddItUp} />
+            <Route exact path="/results" component={Results} />
+            <Route exact path="/sample" component={Sample} />
+          </Switch>
+          <Footer />
+        </Router>
+      </ItemListState>
     </div>
   );
 }

@@ -1,4 +1,10 @@
-import { ADD_ITEM, REMOVE_ITEM } from "./actions";
+import {
+  ADD_ITEM,
+  REMOVE_ITEM,
+  SET_LAST_ITEM_ADDED,
+  SHOW_TOAST,
+  HIDE_TOAST
+} from "./actions";
 
 export default (state, action) => {
   switch (action.type) {
@@ -11,6 +17,23 @@ export default (state, action) => {
       };
     }
 
+    case SET_LAST_ITEM_ADDED:
+      return {
+        ...state,
+        lastItemAdded: action.payload
+      };
+
+    case SHOW_TOAST:
+      return {
+        ...state,
+        isToastShown: true
+      };
+
+    case HIDE_TOAST:
+      return {
+        ...state,
+        isToastShown: false
+      };
     case REMOVE_ITEM:
       console.log("Removing item");
       return state;

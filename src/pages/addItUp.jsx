@@ -20,10 +20,14 @@ const AddItUp = props => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isToastShown, setIsToastShown] = useState(false);
-  const [lastAddedItem, setLastAddedItem] = useState("");
 
-  const { itemList } = useContext(itemListContext);
+  const {
+    itemList,
+    lastItemAdded,
+    isToastShown,
+    hideToast,
+    showToast
+  } = useContext(itemListContext);
 
   const searchTermChange = e => {
     setSearchTerm(e.target.value);
@@ -44,7 +48,7 @@ const AddItUp = props => {
     setSearchTerm("");
   };
 
-  const dismissToast = () => setIsToastShown(false);
+  const dismissToast = () => hideToast(false);
 
   return (
     <React.Fragment>
@@ -94,7 +98,7 @@ const AddItUp = props => {
           autohide
         >
           <Toast.Header>Item Added</Toast.Header>
-          <Toast.Body>Added {lastAddedItem} to your list.</Toast.Body>
+          <Toast.Body>Added {lastItemAdded} to your list.</Toast.Body>
         </Toast>
       )}
     </React.Fragment>

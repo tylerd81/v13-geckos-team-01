@@ -4,7 +4,7 @@ export default (state, action) => {
   switch (action.type) {
     case ADD_ITEM: {
       const { itemList } = state;
-
+      console.log("adding item");
       return {
         ...state,
         itemList: [...itemList, action.payload]

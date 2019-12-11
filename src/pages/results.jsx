@@ -7,9 +7,7 @@ import LabelContainer from "../Components/LabelContainer";
 function Results() {
   return (
     <Container fluid="true">
-      <MainNavbar />
       <LabelContainer />
-      <Footer />
     </Container>
   );
 }

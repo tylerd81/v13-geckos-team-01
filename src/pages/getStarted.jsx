@@ -8,10 +8,8 @@ import Footer from "../Components/Footer";
 function GetStarted() {
   return (
     <Container fluid="true">
-      <MainNavbar />
       <Title />
       <Brand />
-      <Footer />
     </Container>
   );
 }

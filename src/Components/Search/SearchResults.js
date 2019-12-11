@@ -7,7 +7,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 // search component imports
 import SearchResultItem from "./SearchResultItem";
 
-const SearchResults = ({ searchResults, isLoading, addItem }) => {
+const SearchResults = ({ searchResults, isLoading }) => {
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -21,7 +21,6 @@ const SearchResults = ({ searchResults, isLoading, addItem }) => {
     <SearchResultItem
       fdcId={item.fdcId}
       name={item.description}
-      addItem={addItem}
       notes={item.additionalDescriptions}
       ingredients={item.ingredients}
     />

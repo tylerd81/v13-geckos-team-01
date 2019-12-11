@@ -20,9 +20,10 @@ const AddItUp = props => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [itemList, setItemList] = useState([]); // a list of item Id's and names
   const [isToastShown, setIsToastShown] = useState(false);
   const [lastAddedItem, setLastAddedItem] = useState("");
+
+  const { itemList } = useContext(itemListContext);
 
   const searchTermChange = e => {
     setSearchTerm(e.target.value);
@@ -41,12 +42,6 @@ const AddItUp = props => {
     setIsLoading(false);
     setSearchResults(result);
     setSearchTerm("");
-  };
-
-  const addItem = item => {
-    setItemList([...itemList, item]);
-    setLastAddedItem(item.name);
-    setIsToastShown(true);
   };
 
   const dismissToast = () => setIsToastShown(false);
@@ -86,7 +81,6 @@ const AddItUp = props => {
             <SearchResults
               isLoading={isLoading}
               searchResults={searchResults}
-              addItem={addItem}
             />
           </Col>
         </Row>

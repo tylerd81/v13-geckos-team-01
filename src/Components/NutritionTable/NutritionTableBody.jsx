@@ -25,9 +25,9 @@ const NutritionTableBody = ({ tableKeys, tableData }) => {
     const tableItems = tableKeys.map((key, index) => {
       if (key === "remove") {
         return (
-          <td className="remove-icon">
+          <td key={index} className="remove-icon">
             <i className="material-icons" onClick={() => removeItem(dataIndex)}>
-              delete
+              delete_forever
             </i>
           </td>
         );

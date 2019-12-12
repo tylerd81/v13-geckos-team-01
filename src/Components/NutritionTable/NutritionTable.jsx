@@ -75,6 +75,11 @@ const NutritionTable = ({ nutritionData }) => {
     setSortedNutritionData([...nutritionData].sort(comp));
   }, [sortDesc, orderBy, nutritionData]);
 
+  // needed for the first time the component is mounted - unsorted data
+  useEffect(() => {
+    setSortedNutritionData(nutritionData);
+  }, []);
+
   if (nutritionData.length === 0) {
     return (
       <Container fluid>

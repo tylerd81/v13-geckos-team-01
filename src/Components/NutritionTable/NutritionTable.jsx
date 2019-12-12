@@ -12,7 +12,8 @@ const NutritionTable = ({ nutritionData }) => {
     { title: "Calories", key: "nutrients.calories.value" },
     { title: "Protein", key: "nutrients.protein.value" },
     { title: "Sodium", key: "nutrients.sodium.value" },
-    { title: "Carbohydrates", key: "nutrients.carbohydrates.value" }
+    { title: "Carbohydrates", key: "nutrients.carbohydrates.value" },
+    { title: "", key: "remove" }
   ];
 
   const [orderBy, setOrderBy] = useState("name");

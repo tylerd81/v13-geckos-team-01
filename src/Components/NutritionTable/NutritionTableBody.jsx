@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import itemListContext from "../../context/itemListContext";
+
+import "./nutrition-table.css";
 
 const NutritionTableBody = ({ tableKeys, tableData }) => {
+  const { removeItem } = useContext(itemListContext);
+
   // tableData is the array of food items.
   if (tableData.length === 0) {
     return (
@@ -18,6 +23,15 @@ const NutritionTableBody = ({ tableKeys, tableData }) => {
   const tableRows = tableData.map((data, dataIndex) => {
     // get the data using the tableKeys
     const tableItems = tableKeys.map((key, index) => {
+      if (key === "remove") {
+        return (
+          <td className="remove-icon">
+            <i className="material-icons" onClick={() => removeItem(dataIndex)}>
+              delete
+            </i>
+          </td>
+        );
+      }
       // this is looping through the keys and grabbing the
       // values from the data (the nutrient data)
       let tableItem;

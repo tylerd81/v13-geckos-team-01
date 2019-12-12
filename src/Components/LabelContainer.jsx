@@ -3,6 +3,9 @@ import { Container, Table, Dropdown } from "react-bootstrap";
 import Label from "./Label";
 import "./label.css";
 
+// context stuff
+import itemListContext from "../context/itemListContext";
+
 import testData from "./testData.json";
 
 let tempVar = 0;
@@ -10,6 +13,7 @@ let tempVar = 0;
 class LabelContainer extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       completeUnits: true
     };
@@ -117,6 +121,8 @@ class LabelContainer extends React.Component {
   }
 
   render() {
+    const { itemList } = this.context;
+
     return (
       <Container className="mainFont">
         <br />
@@ -157,4 +163,6 @@ class LabelContainer extends React.Component {
   }
 }
 
+// contextType class static property allows access to this.context
+LabelContainer.contextType = itemListContext;
 export default LabelContainer;

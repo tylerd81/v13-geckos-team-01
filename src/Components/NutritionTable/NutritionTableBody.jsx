@@ -30,13 +30,18 @@ const NutritionTableBody = ({ tableKeys, tableData }) => {
 
         // recursively nest into the object
         keys.forEach(nestedKey => {
-          currObj = currObj[nestedKey];
+          if (currObj.hasOwnProperty(nestedKey)) {
+            currObj = currObj[nestedKey];
 
-          //check for a unitName
-          if (typeof currObj.unitName !== "undefined") {
-            unitName = currObj.unitName;
+            //check for a unitName
+            if (typeof currObj.unitName !== "undefined") {
+              unitName = currObj.unitName;
+            }
           }
         });
+
+        currObj = currObj ? currObj.toString() : "Missing Value";
+        unitName = unitName ? unitName.toString() : "Missing Value";
         tableItem = unitName ? currObj + " " + unitName : currObj;
       } else {
         // not a multi level key, just get the data

@@ -32,6 +32,9 @@ const NutritionTableBody = ({ tableKeys, tableData }) => {
         keys.forEach(nestedKey => {
           currObj = currObj[nestedKey];
 
+          if (typeof currObj === "undefined") {
+            return;
+          }
           //check for a unitName
           if (typeof currObj.unitName !== "undefined") {
             unitName = currObj.unitName;

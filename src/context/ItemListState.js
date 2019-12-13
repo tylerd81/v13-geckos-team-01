@@ -32,7 +32,6 @@ const ItemListState = props => {
   };
 
   const removeItem = index => {
-    console.log(`Removing item ${state.itemList[index]}`);
     dispatch({ type: REMOVE_ITEM, payload: index });
   };
 

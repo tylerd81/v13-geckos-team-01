@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import "./brand.css";
 
 function Main() {
@@ -33,9 +35,9 @@ function Main() {
             following sections.
           </p>
           <div className="text-center">
-            <Button size="lg" href="/search">
-              Get Started
-            </Button>
+            <Link to="/search">
+              <Button size="lg">Get Started</Button>
+            </Link>
           </div>
         </Col>
       </Row>

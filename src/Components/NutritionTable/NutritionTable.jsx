@@ -12,7 +12,8 @@ const NutritionTable = ({ nutritionData }) => {
     { title: "Calories", key: "nutrients.calories.value" },
     { title: "Protein", key: "nutrients.protein.value" },
     { title: "Sodium", key: "nutrients.sodium.value" },
-    { title: "Carbohydrates", key: "nutrients.carbohydrates.value" }
+    { title: "Carbohydrates", key: "nutrients.carbohydrates.value" },
+    { title: "", key: "remove" }
   ];
 
   const [orderBy, setOrderBy] = useState("name");
@@ -73,6 +74,11 @@ const NutritionTable = ({ nutritionData }) => {
 
     setSortedNutritionData([...nutritionData].sort(comp));
   }, [sortDesc, orderBy, nutritionData]);
+
+  // needed for the first time the component is mounted - unsorted data
+  useEffect(() => {
+    setSortedNutritionData(nutritionData);
+  }, []);
 
   if (nutritionData.length === 0) {
     return (

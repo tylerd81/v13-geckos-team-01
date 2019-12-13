@@ -5,3 +5,8 @@
   background-color: lightskyblue;
   color: white;
 }
+
+.remove-icon {
+  text-align: center;
+  cursor: pointer;
+}

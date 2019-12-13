@@ -10,7 +10,6 @@ export default (state, action) => {
   switch (action.type) {
     case ADD_ITEM: {
       const { itemList } = state;
-      console.log("adding item");
       return {
         ...state,
         itemList: [...itemList, action.payload]
@@ -34,9 +33,16 @@ export default (state, action) => {
         ...state,
         isToastShown: false
       };
-    case REMOVE_ITEM:
-      console.log("Removing item");
-      return state;
+    case REMOVE_ITEM: {
+      const itemList = [...state.itemList];
+      const indexToRemove = action.payload;
+      itemList.splice(indexToRemove, 1);
+
+      return {
+        ...state,
+        itemList
+      };
+    }
     default:
       return state;
   }

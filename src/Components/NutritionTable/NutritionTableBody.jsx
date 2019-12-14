@@ -47,19 +47,10 @@ const NutritionTableBody = ({ tableKeys, tableData }) => {
           if (currObj.hasOwnProperty(nestedKey)) {
             currObj = currObj[nestedKey];
 
-<<<<<<< HEAD
-          if (typeof currObj === "undefined") {
-            return;
-          }
-          //check for a unitName
-          if (typeof currObj.unitName !== "undefined") {
-            unitName = currObj.unitName;
-=======
             //check for a unitName
             if (typeof currObj.unitName !== "undefined") {
               unitName = currObj.unitName;
             }
->>>>>>> 3d2a267112c78ceba0a6d115542beb4727426bdb
           }
         });
 

@@ -1,0 +1,24 @@
+ul.nutrient-totals {
+  list-style-type: none;
+  display: flex;
+  margin: 0.5rem;
+  justify-content: space-around;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+
+ul.nutrient-totals li {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+span.total {
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  ul.nutrient-totals {
+    flex-direction: column;
+  }
+}

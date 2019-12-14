@@ -124,6 +124,15 @@ class LabelContainer extends React.Component {
     const { itemList } = this.context;
     const testData = itemList;
 
+    if (itemList.length === 0) {
+      return (
+        <div>
+          <h2 className="text-center">
+            Add some items to your list to view your results.
+          </h2>
+        </div>
+      );
+    }
     return (
       <Container className="mainFont">
         <br />

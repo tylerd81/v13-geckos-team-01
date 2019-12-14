@@ -16,6 +16,13 @@ const ItemListState = props => {
   const initialState = {
     itemList: [],
     lastItemAdded: "",
+    totalNutrients: {
+      fat: 0,
+      calories: 0,
+      carbohydrates: 0,
+      sodium: 0,
+      protein: 0
+    },
     isToastShown: false
   };
   const [state, dispatch] = useReducer(itemReducer, initialState);
@@ -47,7 +54,8 @@ const ItemListState = props => {
         addItem,
         removeItem,
         showToast,
-        hideToast
+        hideToast,
+        totalNutrients: state.totalNutrients
       }}
     >
       {props.children}

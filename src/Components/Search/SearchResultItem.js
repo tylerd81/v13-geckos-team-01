@@ -32,7 +32,6 @@ const SearchResultItem = ({ fdcId, name, notes, ingredients }) => {
         )}
         {ingredients && (
           <div className="mt-2 mb-2">
-            {" "}
             <h4 style={{ textDecoration: "underline" }}>Ingredients:</h4>
             <p className="text-secondary">{ingredients}</p>
           </div>

@@ -6,7 +6,7 @@ import "./label.css";
 // context stuff
 import itemListContext from "../context/itemListContext";
 
-import testData from "./testData.json";
+// import testData from "./testData.json";
 
 let tempVar = 0;
 
@@ -32,7 +32,7 @@ class LabelContainer extends React.Component {
     this.setState({ completeUnits: false });
   }
 
-  renderCompleteUnits() {
+  renderCompleteUnits(testData) {
     if (this.state.completeUnits === true) {
       return (
         <div>
@@ -73,7 +73,7 @@ class LabelContainer extends React.Component {
     }
   }
 
-  renderTableSpoonUnits() {
+  renderTableSpoonUnits(testData) {
     if (this.state.completeUnits === false) {
       return (
         <div>
@@ -122,6 +122,7 @@ class LabelContainer extends React.Component {
 
   render() {
     const { itemList } = this.context;
+    const testData = itemList;
 
     return (
       <Container className="mainFont">
@@ -154,8 +155,8 @@ class LabelContainer extends React.Component {
         <br />
 
         {/* CONDITIONAL RENDERING */}
-        {this.renderCompleteUnits()}
-        {this.renderTableSpoonUnits()}
+        {this.renderCompleteUnits(testData)}
+        {this.renderTableSpoonUnits(testData)}
 
         <h5> Ingredients: {testData[0].ingredients}</h5>
       </Container>

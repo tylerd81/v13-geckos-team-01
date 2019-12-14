@@ -39,12 +39,12 @@ function MainNavbar({ history }) {
           >
             Results
           </Nav.Link>
-          <Nav.Link
+          {/* <Nav.Link
             className="letterColorNavbar"
             onClick={() => history.push("/sample")}
           >
             Style-Guide
-          </Nav.Link>
+          </Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
